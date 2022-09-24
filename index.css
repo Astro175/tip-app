@@ -227,6 +227,7 @@ h1  {
 
     header {
         margin: 0;
+        margin-top: 5em;
     }
 
     .lb-1 {
@@ -238,7 +239,7 @@ h1  {
     }
 
     .lb-3 {
-        left: 13em;
+        left: 13.4em;
     }
 
     .lb-4 {
