@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+:root {
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--Strong-cyan: hsl(172, 67%, 45%);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 3em;
+}
+
+header h2{
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+.content-container {
+    display: flex;
+    padding: 2em;
+    gap: 3em;
+    background-color: white;
+    border-radius: 1em;
+}
+
+/* COLUMN-1 */
+
+.column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--Grayish-cyan);
+    /* background-color: orange; */
+    max-width: 450px;
+}
+
+#bill-input {
+    max-width: 100%;
+    padding: 0.5em;
+    background-color: var(--Very-light-grayish-cyan);
+    border: 1px solid white;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+
+
+    height: 40px;
+    width: 70px;
+    font-family: 'Space Mono', monospace;
+    border: 1px solid white;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0.7em;
+    color: white;
+    appearance: none;
+    margin: auto;
+
+}
+
+.btn:checked {
+    background-color: var(--Strong-cyan);
+}
+
+.billing-btns {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    position: relative;
+    
+}
+
+
+input {
+    font-family: 'Space Mono', monospace;
+}
+
+.lb {
+    position: absolute;
+    font-size: 1.2em;
+    color: white;
+}
+
+.lb-1 {
+   left: 1.4em;
+   top: 0.2em;
+}
+.lb-2 {
+    left: 5.5em;
+    top: 0.2em;
+}
+
+.lb-3 {
+    left: 10em;
+    top: 0.2em;
+}
+
+.lb-4 {
+   top: 3.5em;
+   left: 1em;
+}
+
+.lb-5 {
+    top: 3.5em;
+    left: 5.5em;
+}
+#custom {
+    margin-top: 5px;
+    height: 40px;
+    width: 65px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 0.7em;
+    
+}
+
+.label-input {
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 0.3em;
+    border: 1px solid white;
+    max-width: 100%;
+    justify-content: space-between;
+   
+}
+
+#number-btn {
+    margin-left: 14em;
+    width: 10px;
+    background-color: var(--Very-light-grayish-cyan);
+    border: 1px solid white;
+}
+
+.errormsg {
+    display: none;
+    margin: 0;
+    padding: 0;
+    color: red;
+    font-size: 12px;
+}
+
+
+/* COLUMN-2 */
+
+.column-2 {
+    background-color: var(--Very-dark-cyan);
+    padding: 2em;
+    color: white;
+    border-radius: 2em;
+}
+
+section {
+    display: flex;
+    gap: 3em;
+}
+
+h1  {
+    color: var(--Strong-cyan);
+    font-size: 2.2em;
+    margin-top: 20px;
+}
+
+.h-person {
+    margin-left: 0.5em;
+}
+
+.reset-btn{
+    width: 100%;
+    background-color: var(--Dark-grayish-cyan);
+    opacity: 0.8;
+    border: 1px solid var(--Very-dark-cyan);
+}
+
+#number-btn:focus {
+    outline: none;
+}
+/* ACTIVE STATE */
+
+#bill-input:focus {
+   border: 2px solid var(--Strong-cyan);
+   border-radius: 5px;
+   outline: none;
+}
+
+#custom:focus {
+    border: 2px solid var(--Strong-cyan);
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn-active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+/* MOBILE-VIEW */
+
+@media (max-width: 480px) {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        /* width: 100%;
+        max-width: 330px; */
+    }
+
+    header {
+        margin: 0;
+    }
+
+    .lb-1 {
+        left: 2em;
+    }
+    .lb-2 {
+        left: 7.5em;
+        top: 0.2em;
+    }
+
+    .lb-3 {
+        left: 13em;
+    }
+
+    .lb-4 {
+        left: 1.6em;
+        
+    }
+
+    .lb-5 {
+        left: 7.5em;
+    }
+    #number-btn {
+        margin-left: 18em;  
+    }
+
+    
+}
